@@ -14,7 +14,6 @@ export const D1Tables = {
   Families: "Families",
   Dog_To_Group_Photos: "Dog_To_Group_Photos",
 } as const;
-export type D1Tables = keyof typeof D1Tables;
 
 export const D1Columns = {
   Group_Photos: {
@@ -85,11 +84,46 @@ export const D1Columns = {
     dogId: "dogId",
   },
 } as const;
-export type D1Coumns = keyof typeof D1Columns;
+
+
+
+/**
+ * The allowed transformations for images should be based on the image type.
+ **/
+export const ALLOWED_TRANSFORMS = {
+  Group_Photos: {
+    width: 800,
+    quality: 80,
+  },
+  Headshots_Lg: {
+    width: 300,
+    quality: 80,
+  },
+  Headshots_Sm: {
+    width: 100,
+    quality: 80,
+  },
+  withWatermarkTransform: {
+    // This should not be a a query parameter.
+    width: 300,
+    quality: 80,
+  },
+  logoTransform: {
+    width: 300,
+    quality: 80,
+  },
+  /**@default*/
+  default: {
+    width: 100,
+    quality: 20,
+  },
+} as const;
+
 
 const Utils = {
   themeColors,
   D1Tables,
   D1Columns,
+  ALLOWED_TRANSFORMS,
 };
 export default Utils;
