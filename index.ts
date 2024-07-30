@@ -138,7 +138,7 @@ export type D1Tables = keyof typeof D1Tables;
  * All Columns in the D1 Database.
  * @see D1Coumns;
  **/
-export type D1Coumns = keyof typeof D1Columns;
+export type D1Columns = keyof typeof D1Columns;
 
 /**
  * The allowed transformations for images should be based on the image type.
