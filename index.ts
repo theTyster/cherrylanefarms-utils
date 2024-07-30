@@ -144,4 +144,4 @@ export type D1Columns = keyof typeof D1Columns;
  * The allowed transformations for images should be based on the image type.
  * @see ALLOWED_TRANSFORMS;
 **/
-export type allowedTransforms = typeof ALLOWED_TRANSFORMS;
+export type ALLOWED_TRANSFORMS = typeof ALLOWED_TRANSFORMS;
