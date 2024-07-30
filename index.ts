@@ -127,3 +127,21 @@ const Utils = {
   ALLOWED_TRANSFORMS,
 };
 export default Utils;
+
+/**
+ * All Tables in the D1 Database.
+ * @see D1Tables;
+ **/
+export type D1Tables = keyof typeof D1Tables;
+
+/**
+ * All Columns in the D1 Database.
+ * @see D1Coumns;
+ **/
+export type D1Coumns = keyof typeof D1Columns;
+
+/**
+ * The allowed transformations for images should be based on the image type.
+ * @see ALLOWED_TRANSFORMS;
+**/
+export type allowedTransforms = typeof ALLOWED_TRANSFORMS;
