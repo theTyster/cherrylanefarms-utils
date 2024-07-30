@@ -1,19 +1,19 @@
-import * as CLF from "./index";
+import { D1Tables, D1Columns, ALLOWED_TRANSFORMS } from "./index";
 
 /**
- * All Tables in the CLF D1 Database.
- * @see CLF.D1Tables;
+ * All Tables in the D1 Database.
+ * @see D1Tables;
  **/
-type D1Tables = keyof typeof CLF.D1Tables;
+type D1Tables = keyof typeof D1Tables;
 
 /**
- * All Columns in the CLF D1 Database.
- * @see CLF.D1Coumns;
+ * All Columns in the D1 Database.
+ * @see D1Coumns;
  **/
-type D1Coumns = keyof typeof CLF.D1Columns;
+type D1Coumns = keyof typeof D1Columns;
 
 /**
  * The allowed transformations for images should be based on the image type.
- * @see CLF.ALLOWED_TRANSFORMS;
+ * @see ALLOWED_TRANSFORMS;
 **/
-type allowedTransforms = typeof CLF.ALLOWED_TRANSFORMS;
+type allowedTransforms = typeof ALLOWED_TRANSFORMS;
