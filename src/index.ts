@@ -90,7 +90,7 @@ export const D1Columns = {
 /**
  * The allowed transformations for images should be based on the image type.
  **/
-export const ALLOWED_TRANSFORMS = {
+export const VARIANTS = {
   Group_Photos: {
     width: 800,
     quality: 80,
@@ -104,7 +104,6 @@ export const ALLOWED_TRANSFORMS = {
     quality: 80,
   },
   withWatermarkTransform: {
-    // This should not be a a query parameter.
     width: 300,
     quality: 80,
   },
@@ -119,12 +118,13 @@ export const ALLOWED_TRANSFORMS = {
   },
 } as const;
 
+export const VariantNames = Object.keys(VARIANTS) as Array<Variants>;
 
 const Utils = {
   themeColors,
   D1Tables,
   D1Columns,
-  ALLOWED_TRANSFORMS,
+  VARIANTS,
 };
 export default Utils;
 
@@ -142,6 +142,6 @@ export type D1Columns = keyof typeof D1Columns;
 
 /**
  * The allowed transformations for images should be based on the image type.
- * @see ALLOWED_TRANSFORMS;
+ * @see VARIANTS;
 **/
-export type ALLOWED_TRANSFORMS = typeof ALLOWED_TRANSFORMS;
+export type Variants = keyof typeof VARIANTS;
