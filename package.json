@@ -1,6 +1,6 @@
 {
   "name": "cherrylanefarms-utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Utilities for Cherrylanefarmdoodles.com",
   "type": "module",
   "main": ".build/index.js",
