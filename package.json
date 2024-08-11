@@ -1,10 +1,10 @@
 {
   "name": "cherrylanefarms-utils",
-  "version": "1.0.10",
+  "version": "1.0.11-2",
   "description": "Utilities for Cherrylanefarmdoodles.com",
   "type": "module",
-  "main": ".build/index.js",
-  "types": ".build/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.ts",
   "scripts": {
     "_clear": "rimraf .build",
     "_tsc": "tsc",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/theTyster/cherrylanefarms-utils#readme",
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240806.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "rimraf": "^6.0.1",
     "rollup": "^4.20.0",

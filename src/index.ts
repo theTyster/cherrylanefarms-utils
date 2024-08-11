@@ -1,3 +1,7 @@
+import {
+  type RequestInitCfPropertiesImage,
+  type BasicImageTransformations,
+} from "@cloudflare/workers-types";
 export const themeColors = {
   errormessage: "#9f0000",
   errorbackground: "#ffeeee",
@@ -85,8 +89,6 @@ export const D1Columns = {
   },
 } as const;
 
-
-
 /**
  * The allowed transformations for images should be based on the image type.
  **/
@@ -94,28 +96,30 @@ export const VARIANTS = {
   Group_Photos: {
     width: 800,
     quality: 80,
-  },
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
   Headshots_Lg: {
     width: 300,
     quality: 80,
-  },
+    gravity: "center",
+    fit: "crop",
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
   Headshots_Sm: {
     width: 100,
     quality: 80,
-  },
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
   withWatermarkTransform: {
     width: 300,
     quality: 80,
-  },
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
   logoTransform: {
     width: 300,
     quality: 80,
-  },
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
   /**@default*/
   default: {
-    width: 100,
-    quality: 20,
-  },
+    width: 300,
+    quality: 80,
+  } as RequestInitCfPropertiesImage & BasicImageTransformations,
 } as const;
 
 export const VariantNames = Object.keys(VARIANTS) as Array<Variants>;
@@ -143,5 +147,12 @@ export type D1Columns = keyof typeof D1Columns;
 /**
  * The allowed transformations for images should be based on the image type.
  * @see VARIANTS;
-**/
+ **/
 export type Variants = keyof typeof VARIANTS;
+
+export interface ImageData {
+  id: string;
+  table: "Group_Photos" | "Headshots_Sm" | "Headshots_Lg";
+  hash: string;
+  transformUrl?: string;
+}
