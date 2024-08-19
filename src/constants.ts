@@ -8,8 +8,8 @@ import {
  **/
 export const VARIANTS = {
   Group_Photos: {
-    width: 800,
-    height: 600,
+    width: 433,
+    height: 615,
     quality: 80,
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
   Headshots_Lg: {
@@ -20,11 +20,13 @@ export const VARIANTS = {
     fit: "crop",
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
   Headshots_Sm: {
-    width: 100,
+    width: 292,
+    height: 292,
     quality: 80,
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
   withWatermarkTransform: {
     width: 300,
+    height: 300,
     quality: 80,
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
   logoTransform: {
