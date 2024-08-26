@@ -22,20 +22,11 @@ export const VARIANTS = {
   Headshots_Sm: {
     width: 292,
     height: 292,
-    quality: 80,
-  } as RequestInitCfPropertiesImage & BasicImageTransformations,
-  withWatermarkTransform: {
-    width: 300,
-    height: 300,
-    quality: 80,
-  } as RequestInitCfPropertiesImage & BasicImageTransformations,
-  logoTransform: {
-    width: 300,
-    quality: 80,
+    quality: 60,
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
   /**@default*/
   default: {
-    width: 300,
+    width: 292,
     quality: 80,
   } as RequestInitCfPropertiesImage & BasicImageTransformations,
 } as const;
